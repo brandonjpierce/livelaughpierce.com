@@ -1,0 +1,24 @@
+{
+  "name": "wedding-website",
+  "description": "https://livelaughpierce.com website",
+  "type": "static",
+  "profile": "personal",
+  "regions": ["us-east-2"],
+  "lambda": {
+    "memory": 1024
+  },
+  "error_pages": {
+    "disable": true
+  },
+  "redirects": {
+    "/*": {
+      "location": "/",
+      "status": 200
+    }
+  },
+  "stages": {
+    "production": {
+      "domain": "livelaughpierce.com"
+    }
+  }
+}

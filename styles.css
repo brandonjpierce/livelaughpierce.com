@@ -1,0 +1,230 @@
+@keyframes hero-title {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.slideshow {
+  align-items: flex-start;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.slideshow-text {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.slideshow-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.slideshow-subtitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.slideshow-photos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.slideshow-photo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow-photo-1 {
+  background-image: url('img/slideshow-1.jpg');
+  background-position: top center;
+}
+
+.slideshow-photo-2 {
+  background-image: url('img/slideshow-2.jpg');
+  background-position: center center;
+}
+
+.slideshow-photo-3 {
+  background-image: url('img/slideshow-3.jpg');
+  background-position: top center;
+}
+
+.slideshow-photo-4 {
+  background-image: url('img/slideshow-4.jpg');
+  background-position: center center;
+}
+
+.slideshow-photo-5 {
+  background-image: url('img/slideshow-5.jpg');
+  background-position: top center;
+}
+
+.slideshow-photo-1.active,
+.slideshow-photo-2.active,
+.slideshow-photo-3.active,
+.slideshow-photo-4.active,
+.slideshow-photo-5.active {
+  display: block;
+}
+
+.content {
+  margin-left: auto;
+}
+
+.content-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.content-section {
+  border-bottom: 4px solid #111;
+  padding: 2rem;
+}
+
+.schedule-date {
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.schedule-entry {
+  margin-bottom: 2rem;
+}
+
+.schedule-entry-time {
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  width: 175px;
+}
+
+.schedule-entry-content {
+  flex: 1 1 auto;
+}
+
+.schedule-entry-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.q-a {
+  margin-bottom: 2rem;
+}
+
+.q-a--q {
+  font-style: italic;
+}
+
+.q-a--q::before {
+  content: 'Q:';
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.q-a--a::before {
+  content: 'A:';
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 42.85%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .slideshow {
+    position: fixed;
+    width: 40%;
+  }
+
+  .content {
+    width: 60%;
+  }
+}
+
+
+@media only screen and (min-device-width: 1366px) {
+  .slideshow {
+    padding: 6rem;
+    width: 50%;
+  }
+
+  .slideshow-title {
+    font-size: 4rem;
+  }
+
+  .content {
+    width: 50%;
+  }
+
+  .content-section {
+    padding: 4rem;
+  }
+
+  .content-title {
+    font-size: 4rem;
+  }
+
+  .schedule-entry {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-device-width: 1600px) {
+  .slideshow-subtitle {
+    width: 65%;
+  }
+}
