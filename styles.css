@@ -88,12 +88,12 @@ html {
 
 .slideshow-photo-4 {
   background-image: url('img/slideshow-4.jpg');
-  background-position: center center;
+  background-position: bottom right;
 }
 
 .slideshow-photo-5 {
   background-image: url('img/slideshow-5.jpg');
-  background-position: top center;
+  background-position: center center;
 }
 
 .slideshow-photo-1.active,
